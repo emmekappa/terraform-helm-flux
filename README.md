@@ -35,7 +35,7 @@ module "flux-github" {
      source                 = "emmekappa/flux/helm//modules/flux-github"
      deploy_key_name        = "flux-deploy-key"
      github_org_name        = "your-github-org"
-     github_repository_name = "your-sample-repo"
+     github_repository_name = "your-github-repo"
      public_key_openssh     = module.flux.public_key_openssh
 }
 ```
