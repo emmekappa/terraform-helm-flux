@@ -68,3 +68,8 @@ variable "flux_chart_version" {
   default     = "1.5.0"
   description = "Flux chart version https://github.com/fluxcd/flux/tree/master/chart"
 }
+
+variable "gcp_service_account_email" {
+  default     = ""
+  description = "If not null adds gcp-service-account to serviceAccount annotation"
+}

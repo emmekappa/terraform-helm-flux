@@ -72,6 +72,15 @@ resource "helm_release" "flux" {
   }
 
   dynamic "set" {
+    for_each = var.gcp_service_account_email == "" ? [] : [1]
+    content {
+      name  = "serviceAccount.annotations.iam\\.gke\\.io/gcp-service-account"
+      value = var.gcp_service_account_email
+      type  = "string"
+    }
+  }
+
+  dynamic "set" {
     for_each = var.fluxcloud_enabled ? [1] : []
     content {
       name  = "additionalArgs"
