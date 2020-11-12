@@ -10,6 +10,6 @@ variable "public_key_openssh" {
   description = "Flux public key"
 }
 
-variable "cluster_name" {
-  description = "Name of k8s cluster (in order to name the deploy key)"
+variable "deploy_key_name" {
+  description = "Name of the deploy key"
 }

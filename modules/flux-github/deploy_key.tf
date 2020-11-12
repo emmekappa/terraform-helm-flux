@@ -3,7 +3,7 @@ data "github_repository" "flux" {
 }
 
 resource "github_repository_deploy_key" "flux" {
-  title      = "Flux deploy key (${var.cluster_name})"
+  title      = "${var.deploy_key_name} (Flux)"
   repository = data.github_repository.flux.name
   read_only  = false
   key        = var.public_key_openssh
