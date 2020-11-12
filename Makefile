@@ -7,6 +7,5 @@ init:
 fmt:
 	terraform fmt -recursive
 
-
 validate:
 	GITLAB_TOKEN="fake" terraform validate
