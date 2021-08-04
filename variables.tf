@@ -6,11 +6,11 @@ variable "flux_garbage_collection_enabled" {
   default = "false"
 }
 
-variable flux_git_timeout {
+variable "flux_git_timeout" {
   default = "5m"
 }
 
-variable flux_git_poll_interval {
+variable "flux_git_poll_interval" {
   default = "1m"
 }
 
